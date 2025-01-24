@@ -1,0 +1,11 @@
+services:
+    server:
+        image: ghcr.io/imsr/launchserver:latest 
+        container_name: launcher
+        ports:
+            - 127.0.0.1:20003:9274
+        restart: always
+        stdin_open: true
+        tty: true
+        volumes:
+            - ./data:/app/data
